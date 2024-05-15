@@ -71,11 +71,21 @@ static void draw_menu() {
   }
 }
 
+static void draw_bg() {
+  ClearBackground(BLACK);
+  /* Weird background, not super cool, but kinda??? */
+  /* int const *rand_x = LoadRandomSequence(5, 0, WINDOW_W); */
+  /* int const *rand_y = LoadRandomSequence(5, 0, WINDOW_H); */
+  /* for (int i = 0; i < 5; i++) { */
+  /*   int size = GetRandomValue(6, 36); */
+  /*   DrawCircleGradient(rand_x[i], rand_y[i], size, GREEN, PINK); */
+  /* } */
+}
+
 void title_draw() {
 
   BeginDrawing();
-
-  ClearBackground(BLACK);
+  draw_bg();
   DrawText("ESCAPE THE RAY", (WINDOW_W / 2) - 20 * 5, WINDOW_H / 2 - 10, 20,
            get_title_color());
   draw_menu();
